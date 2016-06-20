@@ -1,6 +1,6 @@
 package com.example.simarv.toll;
 
-import com.example.simarv.toll.db.TollHistory;
+import toll.db.TollHistory;
 
 import org.junit.Test;
 

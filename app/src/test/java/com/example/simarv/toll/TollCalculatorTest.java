@@ -1,7 +1,7 @@
 package com.example.simarv.toll;
 
-import com.example.simarv.toll.fee.TollCalculator;
-import com.example.simarv.toll.fee.Vehicle;
+import toll.fee.TollCalculator;
+import toll.fee.Vehicle;
 
 import org.junit.Test;
 
