@@ -1,5 +1,7 @@
 package com.example.simarv.toll;
 
+import com.example.simarv.toll.db.TollHistory;
+
 import org.junit.Test;
 
 import java.text.ParseException;
@@ -28,7 +30,7 @@ public class TollHistoryTest {
         dates.add(getDate("Mon May 20 23:01:01 CEST 2016"));
         dates.add(getDate("Mon May 20 23:01:01 CEST 2016"));
 
-        Map<Date, List<Date>> r = TollHistory.groupedByIsoDayString(dates);
+        Map<Date, List<Date>> r = TollHistory.getData(dates);
         assertEquals(3, r.keySet().size());
 
         List<Date> values = r.values().iterator().next();

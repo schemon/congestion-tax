@@ -28,7 +28,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.example.simarv.toll.R;
-import com.example.simarv.toll.Settings;
+import com.example.simarv.toll.db.Settings;
 import com.example.simarv.toll.fee.Vehicle;
 import com.example.simarv.toll.geofence.GeoFenceHandler;
 import com.google.android.gms.common.api.Result;

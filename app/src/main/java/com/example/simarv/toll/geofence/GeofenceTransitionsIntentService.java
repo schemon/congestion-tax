@@ -22,15 +22,14 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
-import android.graphics.Color;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.TaskStackBuilder;
 import android.text.TextUtils;
 import android.util.Log;
 
 import com.example.simarv.toll.R;
-import com.example.simarv.toll.TollHistory;
-import com.example.simarv.toll.TransitionHistory;
+import com.example.simarv.toll.db.TollHistory;
+import com.example.simarv.toll.db.TransitionHistory;
 import com.example.simarv.toll.activity.MainActivity;
 import com.google.android.gms.location.Geofence;
 import com.google.android.gms.location.GeofencingEvent;
