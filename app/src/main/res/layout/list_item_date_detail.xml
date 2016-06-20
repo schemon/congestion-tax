@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/place_autocomplete_button_padding">
+
+	<TextView
+		android:id="@+id/date"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:text="-"
+		android:textAllCaps="true"
+		android:transitionName="date"
+		android:layout_centerVertical="true"
+		android:layout_alignParentStart="true" />
+
+	<TextView
+		android:id="@+id/price"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="20dp"
+		android:layout_marginStart="20dp"
+		android:text="0 kr"
+		android:textSize="18sp"
+		android:layout_toEndOf="@+id/date"
+		android:layout_centerVertical="true"
+		/>
+
+	<ImageButton
+		android:id="@+id/deleteTime"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@android:drawable/ic_menu_delete"
+		android:layout_centerVertical="true"
+		android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Congestion tax</string>
+
+    <!-- Buttons strings -->
+    <string name="add_geofences">Add geofences</string>
+    <string name="remove_geofences" translatable="false">Remove geofences</string>
+
+    <string name="geofences_added" translatable="false">Geofences added</string>
+    <string name="geofences_removed" translatable="false">Geofences removed</string>
+
+    <!-- Error strings -->
+    <string name="not_connected" translatable="false">GoogleApiClient no yet connected. Try again.</string>
+    <string name="geofence_not_available" translatable="false">Geofence service is not available now</string>
+    <string name="geofence_too_many_geofences" translatable="false">Your app has registered too many geofences</string>
+    <string name="geofence_too_many_pending_intents" translatable="false">
+        You have provided too many PendingIntents to the addGeofences() call
+    </string>
+    <string name="unknown_geofence_error" translatable="false">
+        Unknown error: the Geofence service is not available now
+    </string>
+    <string name="geofence_transition_invalid_type" translatable="false">
+        Geofence transition error: invalid transition type %1$d
+    </string>
+
+    <!-- Transition type strings -->
+    <string name="geofence_transition_entered" translatable="false">Entered</string>
+    <string name="geofence_transition_exited" translatable="false">Exited</string>
+    <string name="unknown_geofence_transition" translatable="false">Unknown Transition</string>
+
+    <string name="You_passed_the_toll_zone">You passed the toll zone.</string>
+    <string name="geofence_transition_notification_text">Click notification to return to app</string>
+    <string name="you_have_not_passed_any_toll_stations_yet_drive_in_or_out_through_the_toll_zone_or_add_a_toll_passing_manually">You have not passed any toll stations yet. Drive in or out through the toll zone or add a toll passing manually</string>
+    <string name="Today">Today</string>
+    <string name="add_manually">Add manually</string>
+    <string name="Notice_when_you_enter_and_exit_the_toll_zone_Calculates_your_congestion_tax_automatically.">Notices when you enter and exit the toll zone.\nCalculates your congestion tax automatically.</string>
+    <string name="enable_now">Enable now</string>
+    <string name="Congestions_tax">Congestion tax</string>
+    <string name="Add_toll_passing">Add toll passing</string>
+    <string name="Delete_all">Delete all</string>
+    <string name="Disable">Disable</string>
+    <string name="Delete_all_toll_passings">Delete all toll passings</string>
+    <string name="Cancel">Cancel</string>
+    <string name="Delete">Delete</string>
+    <string name="Location_is_really_needed">Location is really needed</string>
+    <string name="Request">Request</string>
+</resources>

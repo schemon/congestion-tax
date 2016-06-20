@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Trängselskatt</string>
+	<string name="Today">Idag</string>
+	<string name="add_geofences">Lägg till geofence</string>
+	<string name="geofence_transition_notification_text">Klicka på notifieringen för att öppna appen</string>
+	<string name="you_have_not_passed_any_toll_stations_yet_drive_in_or_out_through_the_toll_zone_or_add_a_toll_passing_manually">Du har inte passerat någon betalstation. Om du åker in eller ut ur trängselzonen så kommer avgiften visas här automatiskt. Du kan även lägga till en tidpunkt för in- eller utresa manuellt.</string>
+	<string name="add_manually">Lägg till manuellt</string>
+	<string name="Congestions_tax">Trängselskatt</string>
+	<string name="enable_now">Aktivera nu</string>
+	<string name="Notice_when_you_enter_and_exit_the_toll_zone_Calculates_your_congestion_tax_automatically.">Känner av när du reser in och ur betalzonen.\nBeräknar avgiften automatiskt.</string>
+	<string name="Add_toll_passing">Lägg till</string>
+	<string name="Cancel">Stäng</string>
+	<string name="Delete">Ta bort</string>
+	<string name="Delete_all_toll_passings">Ta bort all data</string>
+	<string name="Delete_all">Ta bort alla</string>
+	<string name="Disable">Avaktivera</string>
+	<string name="Location_is_really_needed">Platsuppgifter behövs verkligen</string>
+	<string name="Request">Tillåt</string>
+	<string name="toll_zone_passed">Du har passerat trängselzonen.</string>
+</resources>
