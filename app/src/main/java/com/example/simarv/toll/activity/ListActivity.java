@@ -127,17 +127,20 @@ public class ListActivity extends AppCompatActivity {
 			init(listView, data);
 		}
 
-		((ArrayAdapter) listView.getAdapter()).notifyDataSetChanged();
 	}
 
 	private void init(ListView listView, final Map<Date, List<Date>> data) {
 
-		List<Pair<Date, List<Date>>> blurg = new ArrayList<>();
-		for(Date date : data.keySet()) {
-			blurg.add(new Pair<>(date, data.get(date)));
+		if(data.isEmpty()) {
+			return;
 		}
 
-		listView.setAdapter(createAdapter(blurg));
+		List<Pair<Date, List<Date>>> pairData = new ArrayList<>();
+		for(Date date : data.keySet()) {
+			pairData.add(new Pair<>(date, data.get(date)));
+		}
+
+		listView.setAdapter(createAdapter(pairData));
 
 		((ArrayAdapter) listView.getAdapter()).notifyDataSetChanged();
 

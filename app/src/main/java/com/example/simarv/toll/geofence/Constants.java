@@ -44,5 +44,6 @@ public final class Constants {
     static {
         BAY_AREA_LANDMARKS.put("TOLL_ZONE_GOTHENBURG", new LatLng(57.7013956150995, 11.971664428710938));
         BAY_AREA_LANDMARKS.put("HOME", new LatLng(57.7460599, 12.0293507));
+        BAY_AREA_LANDMARKS.put("TOLL_ZONE_ANNA", new LatLng(60.2086194,14.932779));
     }
 }

@@ -27,7 +27,7 @@
     <string name="geofence_transition_exited" translatable="false">Exited</string>
     <string name="unknown_geofence_transition" translatable="false">Unknown Transition</string>
 
-    <string name="You_passed_the_toll_zone">You passed the toll zone.</string>
+    <string name="You_passed_the_toll_zone">You passed the toll zone</string>
     <string name="geofence_transition_notification_text">Click notification to return to app</string>
     <string name="you_have_not_passed_any_toll_stations_yet_drive_in_or_out_through_the_toll_zone_or_add_a_toll_passing_manually">You have not passed any toll stations yet. Drive in or out through the toll zone or add a toll passing manually</string>
     <string name="Today">Today</string>

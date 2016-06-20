@@ -17,5 +17,5 @@
 	<string name="Disable">Avaktivera</string>
 	<string name="Location_is_really_needed">Platsuppgifter behövs verkligen</string>
 	<string name="Request">Tillåt</string>
-	<string name="toll_zone_passed">Du har passerat trängselzonen.</string>
+	<string name="You_passed_the_toll_zone">Du har passerat trängselzonen</string>
 </resources>
