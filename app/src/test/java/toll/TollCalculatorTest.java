@@ -1,4 +1,4 @@
-package com.example.simarv.toll;
+package toll;
 
 import toll.fee.TollCalculator;
 import toll.fee.Vehicle;

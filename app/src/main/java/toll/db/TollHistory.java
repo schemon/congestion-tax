@@ -48,29 +48,43 @@ public class TollHistory {
 	 * @return
 	 */
 	public Map<Date, List<Date>> getData() {
-		// Sorted in ascending time order
-		Map<Date, List<Date>> result = new TreeMap<>(new Comparator<Date>() {
-			@Override public int compare(Date lhs, Date rhs) {
-				return -1*lhs.compareTo(rhs);
-			}
-		});
-
-		DateFormat dayFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
-
-		for(Date date : getAllAsListOfDates()) {
-			Date dateWithoutTime;
-			try {
-				dateWithoutTime = dayFormat.parse(dayFormat.format(date));
-				if(!result.containsKey(dateWithoutTime)) {
-					result.put(dateWithoutTime, new ArrayList<Date>());
-				}
-				List<Date> dates = result.get(dateWithoutTime);
-				dates.add(date);
-				result.put(dateWithoutTime, dates);
-			} catch (ParseException e) {}
+		List<Date> allData = new ArrayList<>();
+		for (long timestamp : (Collection<Long>) getSharedPreferences().getAll().values()) {
+			allData.add(new Date(timestamp));
 		}
 
-		return result;
+		Collections.sort(allData);
+
+		return new Util().groupByDay(allData);
+	}
+
+	public static class Util {
+		public static Map<Date, List<Date>> groupByDay(List<Date> input) {
+			// Sorted in ascending time order
+			Map<Date, List<Date>> result = new TreeMap<>(new Comparator<Date>() {
+				@Override public int compare(Date lhs, Date rhs) {
+					return -1*lhs.compareTo(rhs);
+				}
+			});
+
+			DateFormat dayFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
+
+			for(Date date : input) {
+				Date dateWithoutTime;
+				try {
+					dateWithoutTime = dayFormat.parse(dayFormat.format(date));
+					if(!result.containsKey(dateWithoutTime)) {
+						result.put(dateWithoutTime, new ArrayList<Date>());
+					}
+					List<Date> dates = result.get(dateWithoutTime);
+					dates.add(date);
+					result.put(dateWithoutTime, dates);
+				} catch (ParseException e) {}
+			}
+
+			return result;
+		}
+
 	}
 
 
@@ -81,18 +95,6 @@ public class TollHistory {
 
 	public void delete(Date dateToDelete) {
 		getSharedPreferences().edit().putString("" +dateToDelete.getTime(), null).apply();
-	}
-
-
-
-	private List<Date> getAllAsListOfDates() {
-		List<Date> result = new ArrayList<>();
-		for (long timestamp : (Collection<Long>) getSharedPreferences().getAll().values()) {
-			result.add(new Date(timestamp));
-		}
-
-		Collections.sort(result);
-		return result;
 	}
 
 	private SharedPreferences getSharedPreferences() {

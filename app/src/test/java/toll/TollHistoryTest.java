@@ -1,4 +1,4 @@
-package com.example.simarv.toll;
+package toll;
 
 import toll.db.TollHistory;
 
@@ -30,7 +30,7 @@ public class TollHistoryTest {
         dates.add(getDate("Mon May 20 23:01:01 CEST 2016"));
         dates.add(getDate("Mon May 20 23:01:01 CEST 2016"));
 
-        Map<Date, List<Date>> r = TollHistory.getData(dates);
+        Map<Date, List<Date>> r = new TollHistory.Util().groupByDay(dates);
         assertEquals(3, r.keySet().size());
 
         List<Date> values = r.values().iterator().next();
