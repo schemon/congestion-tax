@@ -35,15 +35,14 @@ public final class Constants {
     public static final String GEOFENCES_ADDED_KEY = PACKAGE_NAME + ".GEOFENCES_ADDED_KEY";
 
 
-    public static final float GEOFENCE_RADIUS_IN_METERS = 20; // 2500; 2,5km
+    public static final float GEOFENCE_RADIUS_IN_METERS = 2500; //2,5km
 
     /**
      * Map for storing information about airports in the San Francisco bay area.
      */
-    public static final HashMap<String, LatLng> BAY_AREA_LANDMARKS = new HashMap<String, LatLng>();
+    public static final HashMap<String, LatLng> GEOFENCE_ZONES = new HashMap<String, LatLng>();
     static {
-        BAY_AREA_LANDMARKS.put("TOLL_ZONE_GOTHENBURG", new LatLng(57.7013956150995, 11.971664428710938));
-        BAY_AREA_LANDMARKS.put("HOME", new LatLng(57.7460599, 12.0293507));
-        BAY_AREA_LANDMARKS.put("TOLL_ZONE_ANNA", new LatLng(60.2086194,14.932779));
+        GEOFENCE_ZONES.put("TOLL_ZONE_GOTHENBURG", new LatLng(57.7013956150995, 11.971664428710938));
+        GEOFENCE_ZONES.put("TOLL_ZONE_ANNA", new LatLng(60.2086194,14.932779));
     }
 }

@@ -214,7 +214,7 @@ public class GeoFenceHandler implements GoogleApiClient.ConnectionCallbacks, Goo
 	 */
 	public List<Geofence> buildGeofenceList() {
 		List<Geofence> geofenceList = new ArrayList<>();
-		for (Map.Entry<String, LatLng> entry : Constants.BAY_AREA_LANDMARKS.entrySet()) {
+		for (Map.Entry<String, LatLng> entry : Constants.GEOFENCE_ZONES.entrySet()) {
 
 			geofenceList.add(new Geofence.Builder()
 					// Set the request ID of the geofence. This is a string to identify this
