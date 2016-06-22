@@ -21,11 +21,13 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import toll.DateUtil;
 import com.example.simarv.toll.R;
 import toll.db.Settings;
 import toll.db.TollHistory;
+import toll.db.TransitionHistory;
 import toll.fee.TollCalculator;
 import toll.geofence.GeoFenceHandler;
 import com.google.android.gms.common.api.Result;
@@ -53,6 +55,7 @@ public class ListActivity extends AppCompatActivity {
 		}
 		menu.add(R.string.Add_toll_passing);
 		menu.add(R.string.Delete_all);
+		menu.add("Info");
 		return super.onCreateOptionsMenu(menu);
 	}
 
@@ -76,6 +79,8 @@ public class ListActivity extends AppCompatActivity {
 							new TollHistory(ListActivity.this).deleteAll();
 						}
 					}).show();
+		} else if (item.getTitle().equals("Info")) {
+			Toast.makeText(this, new TransitionHistory(this).getLastTransition(), Toast.LENGTH_LONG).show();
 		} else {
 			return super.onOptionsItemSelected(item);
 		}

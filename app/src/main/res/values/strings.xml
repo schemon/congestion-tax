@@ -25,7 +25,7 @@
     <!-- Transition type strings -->
     <string name="geofence_transition_entered" translatable="false">Entered</string>
     <string name="geofence_transition_exited" translatable="false">Exited</string>
-    <string name="unknown_geofence_transition" translatable="false">Unknown Transition</string>
+    <string name="unknown_geofence_transition" translatable="false">Unknown</string>
 
     <string name="You_passed_the_toll_zone">You passed the toll zone</string>
     <string name="geofence_transition_notification_text">Click notification to return to app</string>

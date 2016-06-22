@@ -2,6 +2,7 @@
           xmlns:android="http://schemas.android.com/apk/res/android">
 
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 
 	<application
 		android:name="android.support.multidex.MultiDexApplication"
@@ -42,7 +43,7 @@
 		<service android:name="toll.geofence.GeoFenceService" />
 
 		<receiver
-			android:name=".BootReceiver"
+			android:name="toll.BootReceiver"
 			android:enabled="true"
 			android:exported="true"
 			android:label="BootReceiver">

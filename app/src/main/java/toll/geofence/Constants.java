@@ -35,7 +35,7 @@ public final class Constants {
     public static final String GEOFENCES_ADDED_KEY = PACKAGE_NAME + ".GEOFENCES_ADDED_KEY";
 
 
-    public static final float GEOFENCE_RADIUS_IN_METERS = 2500; // 2,5km
+    public static final float GEOFENCE_RADIUS_IN_METERS = 20; // 2500; 2,5km
 
     /**
      * Map for storing information about airports in the San Francisco bay area.

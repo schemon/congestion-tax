@@ -93,7 +93,7 @@ public class GeofenceTransitionsIntentService extends IntentService {
 
             TransitionHistory transitionHistory = new TransitionHistory(this);
             for (Geofence triggeredGeoFence : triggeringGeofences) {
-                String transitionName = triggeredGeoFence.getRequestId();
+                //String transitionName = triggeredGeoFence.getRequestId();
 
                 String geofenceTransitionDetails = getGeofenceTransitionDetails(
                         this,
@@ -104,13 +104,13 @@ public class GeofenceTransitionsIntentService extends IntentService {
 
                 // Send notification and log the transition details.
 
-                if (transitionName.startsWith("TOLL_ZONE")) {
-                    if(!transitionHistory.getLastTransition().equals(transitionName)) {
+                if (geofenceTransitionDetails.startsWith("TOLL_ZONE")) {
+                    if(!transitionHistory.getLastTransition().equals(geofenceTransitionDetails)) {
                         new TollHistory(this).notifyTollPassed();
                         sendNotification();
                     }
 
-                    transitionHistory.setLastTransition(transitionName);
+                    transitionHistory.setLastTransition(geofenceTransitionDetails);
 
                 }
             }
@@ -145,7 +145,7 @@ public class GeofenceTransitionsIntentService extends IntentService {
         }
         String triggeringGeofencesIdsString = TextUtils.join(", ",  triggeringGeofencesIdsList);
 
-        return geofenceTransitionString + ": " + triggeringGeofencesIdsString;
+        return triggeringGeofencesIdsString +"_" +geofenceTransitionString;
     }
 
     /**

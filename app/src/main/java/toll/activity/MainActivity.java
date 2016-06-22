@@ -63,11 +63,6 @@ public class MainActivity extends AppCompatActivity {
 		addGeofenceAndCheckForPermission();
 	}
 
-	public void startGeofenceOther(View view) {
-		new Settings(this).setVehicle(Vehicle.Other);
-		addGeofenceAndCheckForPermission();
-	}
-
 	private void addGeofenceAndCheckForPermission() {
 		if (hasPermission()) {
 			addGeoFence();
